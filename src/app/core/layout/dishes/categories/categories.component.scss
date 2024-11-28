@@ -1,0 +1,14 @@
+.categories-container {
+  position: sticky;
+  top: 174px;
+}
+
+.category-list {
+  min-height: 1px;
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+.categories-heading {
+  border-bottom: 1px dashed grey;
+}

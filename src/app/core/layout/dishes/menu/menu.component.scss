@@ -1,0 +1,27 @@
+.search-dishes-input:focus {
+  outline: none;
+}
+
+.menu-item-title {
+  font-size: 18px;
+}
+
+.menu-item-description {
+  font-size: 13px;
+}
+
+hr {
+  border: 1px solid #cccccc;
+}
+
+.menu-dish-image-container {
+  height: 100px;
+  width: 100px;
+}
+
+.menu-dish-image {
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}

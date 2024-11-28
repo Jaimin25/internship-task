@@ -1,0 +1,49 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light fixed-top z-5 top-0 shadow-sm"
+>
+  <div class="container-fluid px-xl-6 px-lg-4">
+    <img src="/logo.jpg" height="50" class="order-2 order-lg-1" width="80" />
+    <button
+      class="navbar-toggler order-1"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="collapse navbar-collapse d-lg-flex gap-5 justify-content-between order-2"
+      id="navbarSupportedContent"
+    >
+      <div class="flex-column ms-xl-5">
+        <div>
+          <a class="navbar-brand m-0 p-0 fw-bolder" href="#">
+            <h3>{{ title }}</h3>
+          </a>
+        </div>
+        <span>
+          <i class="bi-geo-alt-fill" aria-hidden="true"></i>
+          {{ location }}
+        </span>
+      </div>
+
+      <div class="flex-column my-3 my-lg-0 align-content-center">
+        <div>
+          <label class="text-success fw-bold">{{ restaurantStatus }}</label>
+        </div>
+        <div>
+          <label>{{ restaurantTiming }}</label>
+        </div>
+      </div>
+      <div>
+        <button class="btn me-2 border-primary">Book A Table</button>
+        <button class="btn btn-outline-primary rounded-5">
+          <i class="bi-telephone-fill me-2"></i>{{ mobileNo }}
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

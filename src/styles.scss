@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$primary: $purple-600;
+$secondary: $yellow-300;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+
+//futhermore it's necesary override the $theme-colors
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+$spacers: (
+  6: (
+    $spacer * 10,
+  ),
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@font-face {
+  font-family: Poppins;
+  src: url(assets/fonts/Poppins-Regular.ttf) format("opentype");
+}
+
+app-root {
+  display: block;
+  height: 100%;
+}
+
+body {
+  background-color: #f4f7fb;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  padding-top: 81px;
+}
+
+html {
+  height: 100%;
+}
+
+.card {
+  border: 1px solid #cccccc91;
+}

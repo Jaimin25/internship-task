@@ -5,6 +5,7 @@
   <div class="card-body p-0">
     <!-- Navigation for Scrollspy -->
     <ul
+      *ngIf="!isFetching"
       id="list-example"
       class="category-list list-group rounded-0 rounded-bottom-4 border-0"
     >
@@ -15,6 +16,19 @@
         (click)="scrollToCategory(category.CategryId)"
       >
         {{ category.CategryName }}
+      </li>
+    </ul>
+
+    <ul
+      *ngIf="isFetching"
+      id="list-example"
+      class="category-list list-group rounded-0 rounded-bottom-4 border-0 placeholder-glow"
+    >
+      <li
+        *ngFor="let category of [0, 1, 2, 3, 4, 5]"
+        class="border-0 my-1 px-3 rounded-3"
+      >
+        <label class="placeholder rounded-3 col-5"></label>
       </li>
     </ul>
   </div>

@@ -13,12 +13,16 @@ import { MenuService } from '../../../services/menu.service';
 })
 export class DishesCategoriesComponent implements OnInit {
   categoryList: any;
+  isFetching = true;
 
   constructor(private dataService: MenuService) {}
 
   ngOnInit() {
     this.dataService.getData().subscribe((data) => {
       this.categoryList = data?.CategoryList;
+      setTimeout(() => {
+        this.isFetching = false;
+      }, 1500);
     });
   }
 

@@ -17,16 +17,18 @@ declare var bootstrap: any;
 })
 export class DishesMenuComponent implements OnInit {
   categoryList: any;
+  isFetching: boolean = true;
 
   constructor(private dataService: MenuService) {}
 
   ngOnInit() {
     this.dataService.getData().subscribe((data) => {
       this.categoryList = data?.CategoryList;
-      console.log(this.categoryList);
+      setTimeout(() => {
+        this.isFetching = false;
+      }, 1500);
     });
   }
-
   @HostListener('window:scroll', [''])
   onWindowScroll(event: Event) {
     const scrollPos = window.scrollY || document.documentElement.scrollTop;
